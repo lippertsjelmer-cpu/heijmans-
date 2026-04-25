@@ -1,0 +1,203 @@
+---
+import Container from "../ui/Container.astro";
+---
+
+<section id="diensten" class="relative bg-transparent">
+
+  <Container class="relative pt-4 md:pt-6 pb-16 md:pb-20 lg:pb-24">
+
+    <!-- Section header -->
+    <div class="mb-6 md:mb-12 flex items-baseline justify-between gap-6 flex-wrap">
+      <h2 class="text-[1.5rem] sm:text-3xl lg:text-[2rem] tracking-[-0.025em] text-text-primary leading-tight">
+        Diensten
+      </h2>
+      <span class="text-xs sm:text-sm text-text-secondary">
+        Eén vakman, voor elk klimaat in huis
+      </span>
+    </div>
+
+    <!-- Services showcase -->
+    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2.5 sm:gap-4 md:gap-5">
+
+      <!-- Warmtepomp -->
+      <a href="#dienst-warmtepomp" class="group relative bg-white rounded-2xl sm:rounded-3xl border border-border-subtle hover:border-brand-red/40 transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="relative aspect-square bg-surface-warm overflow-hidden">
+          <img src="/dienst-warmtepomp.jpg" alt="Warmtepomp installatie" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]" loading="lazy" onerror="this.style.opacity=0" />
+        </div>
+
+        <div class="p-2.5 sm:p-5 md:p-6 flex flex-col flex-1">
+          <div class="text-[9px] sm:text-[10px] font-medium tracking-wider uppercase text-text-muted mb-0.5 sm:mb-1.5">
+            Verduurzaming
+          </div>
+          <h3 class="text-sm sm:text-base md:text-lg text-text-primary tracking-[-0.015em] leading-tight font-medium">
+            <span class="relative inline-block">
+              Warmtepomp
+              <span class="absolute left-0 right-0 -bottom-0.5 h-0.5 bg-brand-red origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+            </span>
+          </h3>
+          <div class="mt-auto pt-2 sm:pt-4 flex items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-semibold text-text-primary">€6.500,-</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-text-muted group-hover:text-brand-red group-hover:translate-x-0.5 transition-all shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Airco -->
+      <a href="#dienst-airco" class="group relative bg-white rounded-2xl sm:rounded-3xl border border-border-subtle hover:border-brand-cyan/40 transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="relative aspect-square bg-surface-warm overflow-hidden">
+          <img src="/dienst-airco.jpg" alt="Airco installatie" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]" loading="lazy" onerror="this.style.opacity=0" />
+        </div>
+
+        <div class="p-2.5 sm:p-5 md:p-6 flex flex-col flex-1">
+          <div class="text-[9px] sm:text-[10px] font-medium tracking-wider uppercase text-text-muted mb-0.5 sm:mb-1.5">
+            Klimaatregeling
+          </div>
+          <h3 class="text-sm sm:text-base md:text-lg text-text-primary tracking-[-0.015em] leading-tight font-medium">
+            <span class="relative inline-block">
+              Airco
+              <span class="absolute left-0 right-0 -bottom-0.5 h-0.5 bg-brand-cyan origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+            </span>
+          </h3>
+          <div class="mt-auto pt-2 sm:pt-4 flex items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-semibold text-text-primary">€1.800,-</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-text-muted group-hover:text-brand-cyan group-hover:translate-x-0.5 transition-all shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- CV-ketel -->
+      <a href="#dienst-cv" class="group relative bg-white rounded-2xl sm:rounded-3xl border border-border-subtle hover:border-brand-red/40 transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="relative aspect-square bg-surface-warm overflow-hidden">
+          <img src="/dienst-cv.jpg" alt="CV-ketel" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" style="object-position: 15% center;" loading="lazy" onerror="this.style.opacity=0" />
+        </div>
+
+        <div class="p-2.5 sm:p-5 md:p-6 flex flex-col flex-1">
+          <div class="text-[9px] sm:text-[10px] font-medium tracking-wider uppercase text-text-muted mb-0.5 sm:mb-1.5">
+            Verwarming
+          </div>
+          <h3 class="text-sm sm:text-base md:text-lg text-text-primary tracking-[-0.015em] leading-tight font-medium">
+            <span class="relative inline-block">
+              CV-ketel
+              <span class="absolute left-0 right-0 -bottom-0.5 h-0.5 bg-brand-red origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+            </span>
+          </h3>
+          <div class="mt-auto pt-2 sm:pt-4 flex items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-semibold text-text-primary">Op aanvraag</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-text-muted group-hover:text-brand-red group-hover:translate-x-0.5 transition-all shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Meterkast -->
+      <a href="#dienst-meterkast" class="group relative bg-white rounded-2xl sm:rounded-3xl border border-border-subtle hover:border-text-primary/30 transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="relative aspect-square bg-surface-warm overflow-hidden">
+          <img src="/dienst-meterkast.jpg" alt="Meterkast" class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]" loading="lazy" onerror="this.style.opacity=0" />
+        </div>
+
+        <div class="p-2.5 sm:p-5 md:p-6 flex flex-col flex-1">
+          <div class="text-[9px] sm:text-[10px] font-medium tracking-wider uppercase text-text-muted mb-0.5 sm:mb-1.5">
+            Elektra
+          </div>
+          <h3 class="text-sm sm:text-base md:text-lg text-text-primary tracking-[-0.015em] leading-tight font-medium">
+            <span class="relative inline-block">
+              Meterkast
+              <span class="absolute left-0 right-0 -bottom-0.5 h-0.5 bg-text-primary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+            </span>
+          </h3>
+          <div class="mt-auto pt-2 sm:pt-4 flex items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-semibold text-text-primary">Op aanvraag</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-text-muted group-hover:text-text-primary group-hover:translate-x-0.5 transition-all shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Laadpaal -->
+      <a href="#dienst-laadpaal" class="group relative bg-white rounded-2xl sm:rounded-3xl border border-border-subtle hover:border-text-primary/30 transition-all duration-300 overflow-hidden flex flex-col">
+        <div class="relative aspect-square bg-surface-warm overflow-hidden">
+          <img src="/dienst-laadpaal.jpg" alt="Laadpaal installatie" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" loading="lazy" onerror="this.style.opacity=0" />
+        </div>
+
+        <div class="p-2.5 sm:p-5 md:p-6 flex flex-col flex-1">
+          <div class="text-[9px] sm:text-[10px] font-medium tracking-wider uppercase text-text-muted mb-0.5 sm:mb-1.5">
+            Elektra
+          </div>
+          <h3 class="text-sm sm:text-base md:text-lg text-text-primary tracking-[-0.015em] leading-tight font-medium">
+            <span class="relative inline-block">
+              Laadpaal
+              <span class="absolute left-0 right-0 -bottom-0.5 h-0.5 bg-text-primary origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+            </span>
+          </h3>
+          <div class="mt-auto pt-2 sm:pt-4 flex items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-semibold text-text-primary">€1.200,-</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-text-muted group-hover:text-text-primary group-hover:translate-x-0.5 transition-all shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- CTA card -->
+      <a href="#offerte" class="group relative bg-brand-red text-white rounded-2xl sm:rounded-3xl border border-brand-red hover:bg-brand-red-hover transition-all duration-300 overflow-hidden flex flex-col xl:col-span-5 xl:flex-row xl:items-center xl:mt-2">
+
+        <div class="relative aspect-square xl:aspect-auto xl:w-auto xl:h-full bg-brand-red overflow-hidden flex items-center justify-center p-5 xl:p-6 xl:shrink-0">
+          <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="text-white">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="p-2.5 sm:p-5 md:p-6 xl:py-6 xl:pr-8 xl:pl-2 flex flex-col flex-1 xl:flex-row xl:items-center xl:justify-between xl:gap-8">
+
+          <div class="xl:flex-1">
+            <div class="text-[9px] sm:text-[10px] font-medium tracking-wider uppercase text-white/70 mb-0.5 sm:mb-1.5">
+              Hulp nodig?
+            </div>
+            <h3 class="text-sm sm:text-base md:text-lg xl:text-xl text-white tracking-[-0.015em] leading-tight font-medium">
+              <span class="relative inline-block">
+                Plan adviesgesprek
+                <span class="absolute left-0 right-0 -bottom-0.5 h-0.5 bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+              </span>
+            </h3>
+            <p class="hidden xl:block mt-1 text-sm text-white/80 leading-relaxed">
+              Gratis advies aan huis. Ik kijk samen met je wat het beste werkt.
+            </p>
+          </div>
+
+          <!-- Mobile/tablet footer -->
+          <div class="mt-auto pt-2 sm:pt-4 xl:hidden flex items-center justify-between gap-2">
+            <span class="text-xs sm:text-sm font-semibold text-white">Gratis</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-white/80 group-hover:text-white group-hover:translate-x-0.5 transition-all shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+
+          <!-- Desktop pill button -->
+          <span class="hidden xl:inline-flex items-center gap-2 bg-white text-brand-red px-5 py-3 rounded-full font-medium text-sm shrink-0 group-hover:bg-text-primary group-hover:text-white transition-all">
+            Plan adviesgesprek
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-0.5">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+  </Container>
+</section>

@@ -1,0 +1,91 @@
+---
+import Container from "../ui/Container.astro";
+
+const faqs = [
+  {
+    question: "Wat kost een airco-installatie precies?",
+    answer: "Voor een standaard airco werk ik met een vaste prijs vanaf €1.599 inclusief montage tot 10 meter leidingwerk. Bij een adviesgesprek aan huis bekijk ik de situatie en geef je binnen 24 uur een heldere offerte zonder verrassingen achteraf.",
+  },
+  {
+    question: "In welke regio kom je werken?",
+    answer: "Ik werk in heel Gelderland, met name in de regio rondom Overasselt, Nijmegen, Arnhem en Den Bosch. Twijfel je over jouw locatie? Bel me even, dan bespreken we het.",
+  },
+  {
+    question: "Hoe lang duurt een installatie?",
+    answer: "Een standaard airco-installatie plaats ik in één werkdag. Voor warmtepompen reken ik op één tot twee dagen, afhankelijk van de woningsituatie. Je weet vooraf precies wanneer ik kom en wanneer alles werkt.",
+  },
+  {
+    question: "Wat als er na de installatie iets stuk gaat?",
+    answer: "Je krijgt drie jaar montagegarantie, een jaar langer dan de meeste anderen geven. Voor de apparatuur zelf geldt de fabrieksgarantie van het merk. Ik blijf bereikbaar voor service en onderhoud, ook jaren na de installatie.",
+  },
+  {
+    question: "Werk je met onderaannemers?",
+    answer: "Nee, ik kom zelf langs voor advies en ik installeer alles met eigen handen. Eén aanspreekpunt van eerste gesprek tot na de installatie. Geen verschillende monteurs, geen gedoe met communicatie.",
+  },
+  {
+    question: "Welke merken installeer je?",
+    answer: "Ik werk met A-kwaliteit merken zoals Mitsubishi, Toshiba, Daikin en Sinclair. Bij het adviesgesprek bekijken we samen welk merk en model het beste bij jouw woning en budget past.",
+  },
+];
+---
+
+<section id="faq" class="relative bg-transparent">
+
+  <Container class="relative pt-2 md:pt-4 pb-12 md:pb-16 lg:pb-20">
+
+    <!-- Section header -->
+    <div class="mb-6 md:mb-8 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 sm:flex-wrap">
+      <h2 class="text-[1.5rem] sm:text-3xl lg:text-[2rem] tracking-[-0.025em] text-text-primary leading-tight">
+        Veelgestelde vragen
+      </h2>
+      <span class="text-xs sm:text-sm text-text-secondary">
+        Antwoord op wat klanten meestal vragen
+      </span>
+    </div>
+
+    <!-- FAQ card -->
+    <article class="bg-white rounded-2xl sm:rounded-3xl border border-border-subtle overflow-hidden">
+
+      {faqs.map((faq, i) => (
+        <details class={`group ${i !== 0 ? 'border-t border-border-subtle' : ''}`}>
+          <summary class="flex items-center justify-between gap-4 sm:gap-6 px-5 sm:px-7 md:px-9 py-4 sm:py-5 md:py-6 cursor-pointer list-none hover:bg-surface-warm/40 transition-colors">
+            <h3 class="text-sm sm:text-base md:text-lg text-text-primary tracking-[-0.015em] leading-tight font-medium pr-2">
+              {faq.question}
+            </h3>
+            <span class="shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-cyan/10 text-brand-cyan flex items-center justify-center transition-all group-open:bg-brand-red group-open:text-white group-open:rotate-45">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="px-5 sm:px-7 md:px-9 pb-4 sm:pb-5 md:pb-6 -mt-1">
+            <p class="text-sm sm:text-[15px] text-text-secondary leading-[1.7] max-w-3xl">
+              {faq.answer}
+            </p>
+          </div>
+        </details>
+      ))}
+
+    </article>
+
+    <!-- Bottom helper -->
+    <div class="mt-3 sm:mt-4 px-5 sm:px-7 md:px-9 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs sm:text-sm">
+      <p class="text-text-secondary">
+        Je vraag staat er niet bij?
+      </p>
+      <div class="flex items-center gap-4 sm:gap-5">
+        <a href="tel:+31630614042" class="inline-flex items-center gap-1.5 font-medium text-text-primary hover:text-brand-red transition-colors">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-cyan shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          06 30 61 40 42
+        </a>
+        <span class="w-px h-3 bg-border-default"></span>
+        <a href="#offerte" class="inline-flex items-center gap-1.5 font-medium text-text-primary hover:text-brand-red transition-colors group">
+          Contactformulier
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-0.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </Container>
+</section>

@@ -1,0 +1,215 @@
+---
+import Container from "../ui/Container.astro";
+
+const services = [
+  { name: "Airco installatie", href: "#diensten" },
+  { name: "Warmtepompen", href: "#diensten" },
+  { name: "CV-ketel", href: "#diensten" },
+  { name: "Meterkast", href: "#diensten" },
+  { name: "Laadpaal", href: "#diensten" },
+];
+
+const navigation = [
+  { name: "Over Heijmans", href: "#over" },
+  { name: "Reviews", href: "#reviews" },
+  { name: "Aanbiedingen", href: "#aanbiedingen" },
+  { name: "Werkwijze", href: "#werkwijze" },
+  { name: "Veelgestelde vragen", href: "#faq" },
+];
+
+const workingArea = [
+  "Overasselt", "Nijmegen", "Arnhem", "Wijchen",
+  "Beuningen", "Druten", "Tiel", "Cuijk",
+  "Mook", "Heumen", "Malden", "Groesbeek",
+];
+---
+
+<!-- Final CTA -->
+<section class="relative bg-transparent">
+  <Container class="relative pt-2 md:pt-4 pb-12 md:pb-16 lg:pb-20">
+
+    <article class="relative bg-text-primary rounded-2xl sm:rounded-3xl overflow-hidden">
+
+      <!-- Decorative shapes -->
+      <div aria-hidden="true" class="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand-red opacity-[0.08] pointer-events-none"></div>
+      <div aria-hidden="true" class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full border-[50px] border-brand-cyan opacity-[0.06] pointer-events-none"></div>
+
+      <div class="relative p-6 sm:p-10 md:p-12 lg:p-16 grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 items-end">
+        <div class="max-w-2xl">
+          <span class="text-[10px] sm:text-[11px] font-medium tracking-[0.2em] uppercase text-brand-cyan mb-4 sm:mb-5 inline-block">
+            Klaar om te starten?
+          </span>
+          <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-[2rem] text-white tracking-[-0.025em] leading-[1.15] font-medium">
+            <span class="lg:hidden">Plan een gratis<br/>adviesgesprek aan huis.</span>
+            <span class="hidden lg:inline">Plan een gratis adviesgesprek aan huis.</span>
+        </h2>
+          <p class="mt-4 text-sm sm:text-[15px] text-white/60 leading-[1.7] max-w-lg">
+            Ik kom langs, bekijk de situatie en geef eerlijk advies. Geen verkooppraatje, geen verplichting.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end shrink-0">
+          <a href="#offerte" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-white/90 text-text-primary px-6 py-3.5 rounded-full font-medium text-sm transition-all active:scale-[0.98] group">
+            Plan kennismaking
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-0.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="tel:+31630614042" class="inline-flex items-center justify-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors px-3 py-3.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 30 61 40 42
+          </a>
+        </div>
+      </div>
+    </article>
+  </Container>
+</section>
+
+<!-- Footer -->
+<footer class="relative bg-text-primary text-white">
+  <Container class="relative pt-14 md:pt-20 pb-6 md:pb-8">
+
+    <!-- Top: brand statement -->
+    <div class="pb-12 md:pb-14 mb-12 md:mb-14 border-b border-white/10">
+      <div class="grid lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-16 items-end">
+        <div>
+          <a href="/" class="inline-flex items-center mb-6">
+            <img src="/logo.png" alt="Heijmans Techniek" class="h-10 w-auto brightness-0 invert" onerror="this.style.opacity=0" />
+          </a>
+          <p class="text-sm md:text-base text-white/70 leading-[1.6] max-w-md">
+  Specialist in airco's, warmtepompen en elektrotechniek. Eerlijk advies, eigen handen, drie jaar garantie.
+</p>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap items-center gap-2 lg:justify-end">
+          <div class="inline-flex items-center gap-2 bg-white/[0.04] border border-white/10 rounded-full pl-3 pr-4 py-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-sm font-medium text-white">5.0</span>
+              <span class="text-xs text-white/50">60+ reviews</span>
+            </div>
+          </div>
+          <div class="inline-flex items-center gap-2 bg-white/[0.04] border border-white/10 rounded-full px-4 py-2">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-cyan"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-sm font-medium text-white">STEK-gecertificeerd</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main columns -->
+    <div class="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-10 lg:gap-12">
+
+      <!-- Diensten -->
+      <div class="md:col-span-3">
+        <h3 class="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-5">
+          Diensten
+        </h3>
+        <ul class="space-y-3">
+          {services.map((s) => (
+            <li>
+              <a href={s.href} class="text-sm text-white/75 hover:text-white transition-colors">
+                {s.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Bedrijf -->
+      <div class="md:col-span-3">
+        <h3 class="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-5">
+          Bedrijf
+        </h3>
+        <ul class="space-y-3">
+          {navigation.map((n) => (
+            <li>
+              <a href={n.href} class="text-sm text-white/75 hover:text-white transition-colors">
+                {n.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-span-2 md:col-span-6">
+        <h3 class="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 mb-5">
+          Contact
+        </h3>
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-5">
+
+          <a href="tel:+31630614042" class="group">
+            <div class="text-[10px] font-medium tracking-wider uppercase text-white/40 mb-1">Telefoon</div>
+            <div class="text-base font-medium text-white group-hover:text-brand-cyan transition-colors">06 30 61 40 42</div>
+          </a>
+
+          <a href="mailto:info@heijmanstechniek.nl" class="group min-w-0">
+            <div class="text-[10px] font-medium tracking-wider uppercase text-white/40 mb-1">E-mail</div>
+            <div class="text-base font-medium text-white group-hover:text-brand-cyan transition-colors truncate">info@heijmanstechniek.nl</div>
+          </a>
+
+          <div>
+            <div class="text-[10px] font-medium tracking-wider uppercase text-white/40 mb-1">Adres</div>
+            <div class="text-sm text-white/75 leading-[1.5]">Molenkuil 4<br/>6611 AS Overasselt</div>
+          </div>
+
+          <div>
+            <div class="text-[10px] font-medium tracking-wider uppercase text-white/40 mb-1">Openingstijden</div>
+            <div class="text-sm text-white/75 leading-[1.5]">
+              Ma–vr · 08:00–18:00<br/>
+              <span class="text-white/50">Za op afspraak</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Werkgebied -->
+    <div class="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/10">
+      <div class="grid sm:grid-cols-[auto_1fr] gap-3 sm:gap-8 items-baseline">
+        <h3 class="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/40 shrink-0">
+          Werkgebied
+        </h3>
+        <div class="flex flex-wrap gap-x-4 gap-y-2">
+          {workingArea.map((place, i) => (
+            <>
+              <span class="text-sm text-white/75">{place}</span>
+              {i < workingArea.length - 1 && (
+                <span class="text-white/20" aria-hidden="true">·</span>
+              )}
+            </>
+          ))}
+          <span class="text-sm text-white/40">en omstreken</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-10 md:mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-xs text-white/50">
+        <span>© 2026 Heijmans Techniek</span>
+        <span class="hidden sm:inline w-px h-3 bg-white/20"></span>
+        <span>KVK 75460106</span>
+        <span class="hidden sm:inline w-px h-3 bg-white/20"></span>
+        <span>BTW NL002317001B27</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="/privacy" class="text-xs text-white/50 hover:text-white transition-colors">
+          Privacy
+        </a>
+        <a href="/algemene-voorwaarden" class="text-xs text-white/50 hover:text-white transition-colors">
+          Voorwaarden
+        </a>
+        <a href="/cookies" class="text-xs text-white/50 hover:text-white transition-colors">
+          Cookies
+        </a>
+      </div>
+    </div>
+
+  </Container>
+</footer>

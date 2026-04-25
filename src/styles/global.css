@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+
+@theme {
+  /* Brand */
+  --color-brand-red: #ba0b0d;
+  --color-brand-red-hover: #9a090b;
+  --color-brand-cyan: #0d9bc5;
+  --color-brand-cyan-hover: #0b86ab;
+
+  /* Surfaces */
+  --color-surface-base: #ffffff;
+  --color-surface-warm: #faf7f2;
+  --color-surface-dark: #0f1419;
+
+  /* Text */
+  --color-text-primary: #0f1419;
+  --color-text-secondary: #4a5056;
+  --color-text-muted: #8a8f94;
+  --color-text-inverse: #ffffff;
+
+  /* Borders */
+  --color-border-subtle: rgba(15, 20, 25, 0.08);
+  --color-border-default: rgba(15, 20, 25, 0.15);
+
+  /* Typography */
+  --font-display: "Geist Sans", system-ui, -apple-system, sans-serif;
+  --font-body: "Geist Sans", system-ui, -apple-system, sans-serif;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-section: 5rem;
+  --space-section-lg: 8rem;
+  --container-max: 1280px;
+  --container-padding: 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-surface-warm);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+::selection {
+  background: var(--color-brand-red);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-cyan);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes eq-bar {
+  0%, 100% { height: 30%; }
+  50% { height: 100%; }
+}

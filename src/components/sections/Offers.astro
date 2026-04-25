@@ -1,0 +1,144 @@
+---
+import Container from "../ui/Container.astro";
+
+const offers = [
+  {
+    brand: "Sinclair",
+    model: "Marvin 2.7kW",
+    oldPrice: "1.799",
+    newPrice: "1.599",
+    image: "/aanbieding-sinclair.png",
+  },
+  {
+    brand: "Toshiba",
+    model: "Kazumi Black 2.5kW",
+    oldPrice: "2.199",
+    newPrice: "1.899",
+    image: "/aanbieding-toshiba.png",
+    featured: true,
+  },
+  {
+    brand: "Mitsubishi",
+    model: "MSZ-HR 2.5kW",
+    oldPrice: "2.399",
+    newPrice: "2.099",
+    image: "/aanbieding-mitsubishi.png",
+  },
+];
+---
+
+<section id="aanbiedingen" class="relative bg-transparent">
+
+  <Container class="relative pt-2 md:pt-4 pb-12 md:pb-16 lg:pb-20">
+
+    <!-- Section header -->
+    <div class="mb-6 md:mb-8 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 sm:flex-wrap">
+      <h2 class="text-[1.5rem] sm:text-3xl lg:text-[2rem] tracking-[-0.025em] text-text-primary leading-tight">
+        Aanbiedingen
+      </h2>
+      <span class="text-xs sm:text-sm text-text-secondary">
+        Tijdelijk in prijs verlaagd
+      </span>
+    </div>
+
+    <!-- Main showcase card -->
+    <article class="bg-white rounded-2xl sm:rounded-3xl border border-border-subtle overflow-hidden">
+
+      <!-- Top header strip -->
+      <div class="px-5 sm:px-7 md:px-9 py-4 sm:py-5 border-b border-border-subtle flex items-center justify-between gap-4">
+        <div class="flex items-center gap-2.5">
+          <span class="text-[10px] sm:text-[11px] font-medium tracking-wider uppercase text-brand-cyan">
+            Tijdelijke actie
+          </span>
+          <span class="hidden sm:block w-1 h-1 rounded-full bg-border-default"></span>
+          <span class="hidden sm:block text-xs sm:text-sm text-text-secondary">
+            Inclusief montage binnen 3 weken
+          </span>
+        </div>
+        <div class="flex items-center gap-2 text-xs sm:text-sm text-text-secondary shrink-0">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="text-brand-cyan shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="hidden sm:inline">Geldig tot </span>
+          <span class="text-text-primary font-medium">31 mei</span>
+        </div>
+      </div>
+
+      <!-- Showcase: 3 products -->
+      <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border-subtle">
+
+        {offers.map((offer) => {
+          const discount = parseInt(offer.oldPrice.replace('.', '')) - parseInt(offer.newPrice.replace('.', ''));
+          return (
+            <a href="#offerte" class="group relative flex md:flex-col hover:bg-surface-warm/40 transition-colors">
+
+
+              <!-- Product image -->
+              <div class="relative shrink-0 w-32 sm:w-40 md:w-full md:aspect-[4/3] aspect-square bg-brand-cyan/5 overflow-hidden flex items-center justify-center">
+                <img src={offer.image} alt={`${offer.brand} ${offer.model}`} class="w-full h-full object-contain p-3 sm:p-5 md:p-10 transition-transform duration-700 group-hover:scale-[1.05]" loading="lazy" onerror="this.style.opacity=0" />
+              </div>
+
+              <!-- Product info -->
+              <div class="p-4 sm:p-5 md:p-7 flex flex-col flex-1 min-w-0">
+
+                <!-- Korting -->
+                <div class="inline-flex w-fit items-center bg-brand-cyan/10 text-brand-cyan rounded-full px-2 py-0.5 text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase mb-2 md:mb-3">
+                  −€{discount.toLocaleString('nl-NL')}
+                </div>
+
+                <!-- Brand + model -->
+                <h3 class="text-base sm:text-lg md:text-2xl text-text-primary tracking-[-0.02em] leading-tight font-medium">
+                  {offer.brand}
+                </h3>
+                <p class="text-xs sm:text-sm text-text-secondary mt-0.5 truncate">
+                  {offer.model}
+                </p>
+
+                <!-- Prijzen -->
+                <div class="mt-2 md:mt-4 flex items-baseline gap-2">
+                  <span class="text-xs sm:text-sm text-text-muted line-through">
+                    €{offer.oldPrice}
+                  </span>
+                  <span class="text-lg sm:text-xl md:text-[1.75rem] text-brand-red tracking-[-0.025em] leading-none font-semibold">
+                    €{offer.newPrice}
+                  </span>
+                </div>
+
+                <!-- CTA -->
+                <div class="mt-auto pt-3 md:pt-5 flex items-center gap-2 text-xs sm:text-sm font-medium text-text-primary group-hover:text-brand-red transition-colors">
+                  Offerte binnen 24u
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-0.5">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+
+      </div>
+
+      <!-- Bottom trust strip -->
+      <div class="px-5 sm:px-7 md:px-9 py-4 sm:py-5 bg-surface-warm border-t border-border-subtle">
+        <div class="flex flex-wrap items-center justify-center sm:justify-between gap-x-6 gap-y-2">
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-text-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-cyan shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            Inclusief montage
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-text-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-cyan shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            Vaste prijs vooraf
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-text-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-cyan shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            3 jaar montagegarantie
+          </div>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-text-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="text-brand-cyan shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+            Eigen monteur
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </Container>
+</section>

@@ -1,0 +1,134 @@
+---
+import Container from "../ui/Container.astro";
+
+const steps = [
+  {
+    number: "01",
+    title: "Adviesgesprek",
+    description: "Ik kom langs en geef eerlijk advies.",
+    timing: "Dag 1 · Gratis",
+    icon: "chat",
+  },
+  {
+    number: "02",
+    title: "Heldere offerte",
+    description: "Vaste prijs binnen 24 uur.",
+    timing: "Binnen 24u",
+    icon: "doc",
+  },
+  {
+    number: "03",
+    title: "Installatie",
+    description: "Vakkundig geplaatst en getest.",
+    timing: "Binnen 4 weken",
+    icon: "tool",
+  },
+  {
+    number: "04",
+    title: "Garantie",
+    description: "Drie jaar montagegarantie.",
+    timing: "3 jaar nazorg",
+    icon: "shield",
+  },
+];
+---
+
+<section id="werkwijze" class="relative bg-transparent">
+
+  <Container class="relative pt-2 md:pt-4 pb-12 md:pb-16 lg:pb-20">
+
+    <!-- Section header -->
+    <div class="mb-6 md:mb-8 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 sm:flex-wrap">
+      <h2 class="text-[1.5rem] sm:text-3xl lg:text-[2rem] tracking-[-0.025em] text-text-primary leading-tight">
+        Werkwijze
+      </h2>
+      <span class="text-xs sm:text-sm text-text-secondary">
+        Van eerste gesprek tot drie jaar nazorg
+      </span>
+    </div>
+
+    <!-- Process card -->
+    <article class="bg-white rounded-2xl sm:rounded-3xl border border-border-subtle p-5 sm:p-8 md:p-10 lg:p-12">
+
+      <div class="relative">
+
+        <!-- Connecting horizontal line (desktop) -->
+        <div class="hidden lg:block absolute top-7 left-[10%] right-[10%] h-px bg-gradient-to-r from-brand-red via-brand-red/40 to-brand-cyan pointer-events-none" aria-hidden="true"></div>
+
+        <ol class="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-7 md:gap-8 relative">
+
+          {steps.map((step, i) => (
+            <li class="relative flex lg:flex-col items-start gap-4 lg:gap-0">
+
+              <!-- Icon circle -->
+              <div class="relative z-10 mb-0 lg:mb-5 shrink-0">
+                <div class={`w-11 h-11 sm:w-12 sm:h-12 lg:w-[3.75rem] lg:h-[3.75rem] rounded-full flex items-center justify-center ${i === 0 ? 'bg-brand-red text-white' : 'bg-white border-2 border-brand-red/30 text-brand-red'}`}>
+                  {step.icon === 'chat' && (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="lg:w-[22px] lg:h-[22px]">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                  )}
+                  {step.icon === 'doc' && (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="lg:w-[22px] lg:h-[22px]">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="9" y1="13" x2="15" y2="13"/>
+                      <line x1="9" y1="17" x2="13" y2="17"/>
+                    </svg>
+                  )}
+                  {step.icon === 'tool' && (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="lg:w-[22px] lg:h-[22px]">
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                  )}
+                  {step.icon === 'shield' && (
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" class="lg:w-[22px] lg:h-[22px]">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <polyline points="9 12 11 14 15 10"/>
+                    </svg>
+                  )}
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 min-w-0 lg:w-full">
+
+                <div class="flex items-baseline gap-1.5 mb-1">
+                  <span class="text-[10px] sm:text-xs font-semibold tracking-wider text-brand-red">
+                    {step.number}
+                  </span>
+                  <span class="text-[10px] sm:text-xs text-text-muted">— STAP</span>
+                </div>
+
+                <div class="flex items-baseline justify-between gap-3 lg:block">
+                  <h3 class="text-base sm:text-lg lg:text-xl text-text-primary tracking-[-0.02em] leading-tight font-medium">
+                    {step.title}
+                  </h3>
+                  <div class="lg:hidden inline-flex items-center gap-1 bg-brand-cyan/10 text-brand-cyan rounded-full px-2 py-0.5 text-[10px] font-semibold shrink-0">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    {step.timing}
+                  </div>
+                </div>
+
+                <p class="mt-2 lg:mt-2 text-xs sm:text-sm text-text-secondary leading-[1.55]">
+                  {step.description}
+                </p>
+
+                <!-- Timing chip (desktop only) -->
+                <div class="hidden lg:block mt-auto pt-5">
+                  <div class="inline-flex items-center gap-1.5 bg-brand-cyan/10 text-brand-cyan rounded-full px-2.5 py-1 text-xs font-semibold">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" class="shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    {step.timing}
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+
+        </ol>
+      </div>
+
+    </article>
+
+  </Container>
+</section>
